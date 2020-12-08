@@ -45,6 +45,7 @@ function lastData(e) {
 // keep email data
 function emailData(e) {
   console.log("emailData ->", e.target.value);
+  // TODO: maybe need regex for email validation !
 }
 // keep brithday date data
 function birthdateData(e) {
