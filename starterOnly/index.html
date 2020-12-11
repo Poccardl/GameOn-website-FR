@@ -46,13 +46,13 @@
           je m'inscris
         </button>
       </div>
+      <!-- FORMULAIRE INSCRIPTION -->
       <div class="bground">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <!-- -->
             <form name="reserve" action="index.html" method="get">
-              <div class="formData">
+              <div id="test" class="formData">
                 <label for="first">Prénom</label><br>
                 <input class="text-control" id="first" name="first" required><br>
               </div>
@@ -72,9 +72,9 @@
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input class="text-control" id="quantity" name="quantity" required>
               </div>
+              <!-- Checkbox villes -->
               <p class="text-label">Quelles villes ?</p>
-              <!-- -->
-              <div class="formData">
+              <div class="formData location_form">
                 <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" required>
                 <label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
                 <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco"/>
@@ -88,7 +88,7 @@
                 <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland"/>
                 <label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
               </div>
-              <!-- -->
+              <!-- Checkbox condition d'utilisation -->
               <div class="formData">
                 <input class="checkbox-input" type="checkbox" id="checkbox1" checked required autofocus>
                 <label class="checkbox2-label" for="checkbox1">

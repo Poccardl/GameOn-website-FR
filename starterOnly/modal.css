@@ -99,7 +99,7 @@ img {
     display: block;
     margin-top: -15px;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -226,12 +226,11 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
+
+.msg_error {
+    font-size: 14px;
     color: red;
-} */
+}
 .checkbox-label,
 .checkbox2-label {
   position: relative;
