@@ -10,15 +10,20 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const closemodal = document.querySelector(".close");
+const closemodal2 = document.querySelector(".close2");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData input");
 const pushform = document.querySelector(".btn-submit");
 const locationDiv = document.querySelector(".location_form");
 const locationCheckbox = document.querySelectorAll(".location_form [name=\"location\"]");
 
+const modalbody = document.querySelector(".modal-body");
+const modalbody2 = document.querySelector(".modal-body-2");
+
 // launch modal events
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 closemodal.addEventListener("click",  closeModal);
+closemodal2.addEventListener("click",  closeModal);
 pushform.addEventListener("click", pushForm);
 
 // launch form validation events
@@ -39,12 +44,17 @@ function launchModal() {
 // close modal form
 function closeModal() {
   modalbg.style.display = "none";
+  modalbody.style.display = "block";
+  modalbody2.style.display = "none";
 }
 //
 function pushForm() {
   console.log("push form");
   locationData();
   conditionData();
+  // TODO: if le formulaire est valide;
+  modalbody.style.display = "none";
+  modalbody2.style.display = "block";
 }
 
 // first name validation

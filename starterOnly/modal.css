@@ -184,6 +184,13 @@ main {
 }
 
 .modal-body {
+  display: block;
+  padding: 15px 8%;
+  margin: 15px auto;
+}
+.modal-body-2 {
+  display: none;
+  text-align: center;
   padding: 15px 8%;
   margin: 15px auto;
 }
