@@ -37,41 +37,24 @@ function closeModal() {
   modalbody.style.display = "block";
   modalbody2.style.display = "none";
 }
-// TODO: add comments
+// push form
 function pushForm(e) {
   e.preventDefault();
   validationFrom();
 }
-// TODO: add comments
+// validation form
 function validationFrom() {
   let validation_list = []
-
   first_data = firstData(formData[0].value);
-  console.log("valeur de first name :", formData[0].value);
-  console.log("function firstData value :", first_data);
-
   last_data = lastData(formData[1].value);
-  console.log("function lastData value :", last_data);
-
   email_data = emailData(formData[2].value);
-  console.log("function emailData value :", email_data);
-
   birthdate_data = birthdateData(formData[3].value);
-  console.log("function birthdateData value :", birthdate_data);
-
   quantity_data = quantityData(formData[4].value);
-  console.log("function quantityData value :", quantity_data);
-
   location_data = locationData(locationCheckbox);
-  console.log("function locationData value :", location_data);
-
   condition_data = conditionData(formData[11]);
-  console.log("function conditionData value :", condition_data);
-
   validation_form = true;
   validation_list.push(first_data, last_data, email_data, birthdate_data, quantity_data, location_data, condition_data);
   for (element in validation_list) {
-    console.log("validation list :", validation_list[element]);
     if (validation_list[element] == false) {
       validation_form = false;
     }
@@ -183,7 +166,6 @@ function quantityData(data) {
 }
 // location validation
 function locationData(data) {
-  console.log("location data :::", data);
   var valid = false;
   for (element in  data) {
     if (data[element].checked == true) {
@@ -193,9 +175,7 @@ function locationData(data) {
   var error = ('<span id="error6" class="msg_error">Vous devez choisir une ville.</span>');
   var errorData = document.getElementById("error6");
   if (valid == true) {
-    console.log("no error");
   } else {
-    console.log("error");
     locationDiv.insertAdjacentHTML("afterend", error);
   } try {
     errorData.remove();
