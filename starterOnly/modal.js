@@ -14,19 +14,18 @@ const closemodal2 = document.querySelector(".close2");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData input");
 const pushform = document.querySelector(".btn-submit");
-
 const locationDiv = document.querySelector(".location_form");
 const locationCheckbox = document.querySelectorAll(".location_form [name=\"location\"]");
-console.log("test ->", locationCheckbox);
-
 const modalbody = document.querySelector(".modal-body");
 const modalbody2 = document.querySelector(".modal-body-2");
+const edit_nav = document.querySelector(".icon");
 
 // launch modal events
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 closemodal.addEventListener("click",  closeModal);
 closemodal2.addEventListener("click",  closeModal);
 pushform.addEventListener("click", pushForm);
+edit_nav.addEventListener("click", editNav);
 
 // launch modal form
 function launchModal() {
@@ -48,6 +47,7 @@ function validationFrom() {
   let validation_list = []
 
   first_data = firstData(formData[0].value);
+  console.log("valeur de first name :", formData[0].value);
   console.log("function firstData value :", first_data);
 
   last_data = lastData(formData[1].value);
@@ -76,11 +76,12 @@ function validationFrom() {
       validation_form = false;
     }
   }
-  console.log("validation list ::", validation_list);
-  console.log("validation form ::", validation_form);
   if (validation_form == true) {
     modalbody.style.display = "none";
     modalbody2.style.display = "block";
+    for (element in formData) {
+      formData[element].value = "";
+    }
   } else {
     return false;
   }
@@ -125,7 +126,7 @@ function lastData(data) {
 // email validation
 function emailData(data) {
   var valid = false;
-  const regex_mail = RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+  const regex_mail = RegExp(/^[a-z0-9._-]+@[a-z_]+?\.[a-z]{2,3}$/);
   const regex_is = regex_mail.test(data);
   var error = ('<span id="error3" class="msg_error">Vous devez entrer une adresse email valide.</span>');
   var errorData = document.getElementById("error3");

@@ -195,6 +195,18 @@ main {
   margin: 15px auto;
 }
 
+.close2 {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
 label {
   font-family: var(--font-default);
   font-size: 17px;
