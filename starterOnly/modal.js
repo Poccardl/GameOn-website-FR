@@ -36,6 +36,7 @@ function closeModal() {
   modalbg.style.display = "none";
   modalbody.style.display = "block";
   modalbody2.style.display = "none";
+  resetFrom();
 }
 // push form
 function pushForm(e) {
@@ -62,11 +63,23 @@ function validationFrom() {
   if (validation_form == true) {
     modalbody.style.display = "none";
     modalbody2.style.display = "block";
-    for (element in formData) {
-      formData[element].value = "";
+    resetFrom();
     }
-  } else {
+   else {
     return false;
+  }
+}
+// reset form
+function resetFrom() {
+  for (element in formData) {
+    try {
+      formData[element].value = "";
+      formData[element].style.borderColor = "white";
+      // reset error messages
+      error_msg_list = ["error1", "error2", "error3", "error4", "error5", "error6", "error7"];
+      var errorData = document.getElementById(error_msg_list[element]);
+      errorData.remove();
+    } catch {}
   }
 }
 
