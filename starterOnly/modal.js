@@ -89,6 +89,7 @@ function firstData(data) {
   var valid = false;
   var error = ('<span id="error1" class="msg_error">Veuillez entrer 2 caractères ou plus pour le champ du nom.</span>');
   var errorData = document.getElementById("error1");
+  data = data.replace(/\s/g, '');
   if (data.length > 1) {
     valid = true;
     formData[0].style.borderColor = "green";
@@ -107,6 +108,7 @@ function lastData(data) {
   var valid = false;
   var error = ('<span id="error2" class="msg_error">Veuillez entrer 2 caractères ou plus pour le champ du nom.</span>');
   var errorData = document.getElementById("error2");
+  data = data.replace(/\s/g, '');
   if (data.length > 1) {
     valid = true;
     formData[1].style.borderColor = "green";
