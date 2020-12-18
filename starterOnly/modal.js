@@ -26,7 +26,7 @@ closemodal.addEventListener("click",  closeModal);
 closemodal2.addEventListener("click",  closeModal);
 pushform.addEventListener("click", pushForm);
 edit_nav.addEventListener("click", editNav);
-formData[0].addEventListener("change", firstData);
+//formData[0].addEventListener("change", firstData);
 
 // launch modal form
 function launchModal() {
